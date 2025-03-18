@@ -6,7 +6,11 @@
         <h2>About Me</h2>
         <div class="about-content">
             <div class="profile-section">
-                <img src="/your-profile-image.webp" alt="Profile Picture" />
+                <img src="/your-profile-image.jpg" alt="Profile Picture" />
+                <a href="https://github.com/jessenhs" target="_blank" rel="noopener noreferrer" class="github-link">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
             </div>
             <div class="text-section">
                 <p>I'm Jesse, a software developer with a growing passion for creating digital solutions. My journey into the world of programming has equipped me with a versatile skill set that allows me to work across different layers of application development.</p>
@@ -35,17 +39,40 @@
         padding: 4rem 2rem;
         background-color: #111;
         color: white;
+        display: flex;
+        align-items: center;
     }
 
     .about-container {
         max-width: 1200px;
         margin: 0 auto;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.03);
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
     }
 
     h2 {
         font-size: 2.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         text-align: center;
+        background: linear-gradient(45deg, #fff, #ccc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(45deg, #fff, #666);
+        border-radius: 2px;
     }
 
     .about-content {
@@ -55,11 +82,26 @@
         flex-wrap: wrap;
     }
 
+    .profile-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
     .profile-section img {
         width: 300px;
         height: 300px;
         border-radius: 50%;
         object-fit: cover;
+        border: 4px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-section img:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
     }
 
     .text-section {
@@ -69,17 +111,19 @@
 
     p {
         margin-bottom: 1.5rem;
-        line-height: 1.6;
+        line-height: 1.8;
         font-size: 1.1rem;
+        color: #e0e0e0;
     }
 
     .skills {
-        margin-top: 2rem;
+        margin-top: 2.5rem;
     }
 
     .skills h3 {
         font-size: 1.5rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+        color: #fff;
     }
 
     .skills ul {
@@ -91,9 +135,53 @@
     }
 
     .skills li {
-        background-color: #333;
-        padding: 0.5rem 1rem;
+        background: linear-gradient(45deg, #333, #444);
+        padding: 0.6rem 1.2rem;
         border-radius: 20px;
         font-size: 0.9rem;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .skills li:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(45deg, #444, #555);
+    }
+
+    .github-link {
+        color: #ccc;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+        background: linear-gradient(45deg, #333, #444);
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        font-size: 1rem;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .github-link:hover {
+        color: white;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        background: linear-gradient(45deg, #444, #555);
+    }
+
+    @media (max-width: 768px) {
+        .about-container {
+            padding: 1.5rem;
+        }
+
+        .profile-section img {
+            width: 250px;
+            height: 250px;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
     }
 </style>

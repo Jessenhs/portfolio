@@ -17,7 +17,7 @@
                 <h3>Jessenhs dev</h3>
                 <p>A modern, fast-loading portfolio website built with Astro.js, showcasing professional projects and skills. This static site generator combines the best of static site performance with dynamic JavaScript capabilities where needed.</p>
                 <div class="tech-stack">
-                    <span>Astro</span>
+                    <span>Astro Framework</span>
                     <span>HTML</span>
                     <span>CSS</span>
                 </div>
@@ -39,23 +39,43 @@
 <style>
     #projects {
         min-height: 100vh;
-        padding: 6rem 0;
-        background-color: #0d0d0d;
+        padding: 4rem 2rem;
+        background-color: #111;
+        color: white;
+        display: flex;
+        align-items: center;
     }
 
     .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 2rem;
+        padding: 2rem;
+        background-color: rgba(255, 255, 255, 0.03);
+        border-radius: 20px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
     }
 
     h2 {
         font-size: 2.5rem;
         margin-bottom: 3rem;
         text-align: center;
-        background: linear-gradient(45deg, #fff, #aaa);
+        background: linear-gradient(45deg, #fff, #ccc);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(45deg, #fff, #666);
+        border-radius: 2px;
     }
 
     .projects-grid {
@@ -118,12 +138,20 @@
     }
 
     @media (max-width: 768px) {
+        .container {
+            padding: 1.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
         .projects-grid {
             grid-template-columns: 1fr;
         }
         
         #projects {
-            padding: 4rem 0;
+            padding: 4rem 2rem;
         }
     }
 </style>
