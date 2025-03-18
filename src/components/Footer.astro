@@ -1,0 +1,105 @@
+---
+const currentYear = new Date().getFullYear();
+const socialLinks = [
+    { href: "https://github.com/jessenhs", label: "GitHub", icon: "github" },
+];
+---
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="primary">Jessenhs</span>
+                <span class="secondary">.dev</span>
+            </div>
+            <div class="footer-links">
+                {socialLinks.map((link) => (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" class={`social-link ${link.icon}`}>
+                        <i class={`fab fa-${link.icon}`}></i>
+                        {link.label}
+                    </a>
+                ))}
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; {currentYear} Jesse NHS. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background-color: #0a0a0a;
+        color: white;
+        padding: 3rem 0 1.5rem;
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .footer-logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: flex;
+        gap: 0.2rem;
+    }
+
+    .footer-logo .primary {
+        background: linear-gradient(45deg, #fff, #ccc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .footer-logo .secondary {
+        color: #666;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .social-link {
+        color: #ccc;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .social-link:hover {
+        color: white;
+    }
+
+    .footer-bottom {
+        border-top: 1px solid #333;
+        padding-top: 1.5rem;
+        text-align: center;
+        color: #666;
+        font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .footer-links {
+            justify-content: center;
+        }
+    }
+</style>
