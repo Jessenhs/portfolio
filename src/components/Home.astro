@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Projects from '../components/Projects.astro';
+import Contact from '../components/Contact.astro';
 ---
 
 <Layout>
@@ -10,8 +12,15 @@ import Layout from '../layouts/Layout.astro';
                     <span>Welcome to</span>
                     <span>Jesse's Portfolio</span>
                 </h1>
+                <a href="#projects" class="scroll-down">
+                    <span>View my work</span>
+                    <div class="arrow"></div>
+                </a>
             </div>
         </section>
+        
+        <Projects />
+        <Contact />
     </div>
 </Layout>
 
