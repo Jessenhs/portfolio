@@ -1,26 +1,40 @@
-# Astro Starter Kit: Basics
+# Jesse's Portfolio Website
 
-```sh
-npm create astro@latest -- --template basics
+A personal portfolio website built with Astro, showcasing my projects, skills, and professional background.
+
+## 🚀 Live Demo
+
+Visit the live portfolio: [Jesse's Portfolio](https://jessenhs.github.io/portfolio/)
+
+## ✨ Features
+
+- Responsive design that works on all devices
+- Modern UI with smooth animations
+- Sections for Home, About, Projects, and Contact
+- GitHub integration
+- Skills showcase
+- Dark mode theme
+
+## 🛠️ Technologies Used
+
+- [Astro](https://astro.build/) - The web framework for content-driven websites
+- HTML5 & CSS3
+- [Font Awesome](https://fontawesome.com/) - For icons
+- CSS Custom Properties for theming
+
+## 🏗️ Project Structure
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
 ├── public/
 │   └── favicon.svg
 ├── src/
+│   ├── components/
+│   │   ├── About.astro
+│   │   ├── Footer.astro
+│   │   ├── Home.astro
+│   │   ├── NavBar.astro
+│   │   └── Projects.astro
 │   ├── layouts/
 │   │   └── Layout.astro
 │   └── pages/
@@ -28,21 +42,59 @@ Inside of your Astro project, you'll see the following folders and files:
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 🧞 Getting Started
 
-## 🧞 Commands
+### Prerequisites
 
-All commands are run from the root of the project, from a terminal:
+- Node.js (v16 or higher)
+- npm or yarn
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Installation
 
-## 👀 Want to learn more?
+1. Clone the repository
+   ```bash
+   git clone https://github.com/jessenhs/portfolio.git
+   cd portfolio
+   ```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+
+3. Start the development server
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and visit `http://localhost:4321`
+
+## 📦 Building for Production
+
+```bash
+npm run build
+```
+
+This will generate the static files in the `dist/` directory.
+
+## 🚀 Deployment
+
+The site is configured for GitHub Pages deployment. After building:
+
+```bash
+npm run preview
+```
+
+To preview the production build locally.
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👨‍💻 About Me
+
+I'm Jesse, a software developer with a passion for creating digital solutions. My skill set includes Web Development, Python, PHP, SQL, CSS, HTML, XAMPP, Astro Framework, and Unity.
+
+## 📬 Contact
+
+Feel free to reach out to me on [GitHub](https://github.com/jessenhs).
